@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="./Student/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Styles.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logos">
+            <img src="image.png" alt="IMEC">
+            <h2>IMEC SAGAR 2024 Notification DashBoard</h2>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="buttons">Home</a></li>
+            <li><a href="#" class="buttons">About Us</a></li>
+            <li><a href="#" class="buttons">latest-updates</a></li>
+            <li><a href="login.html" class="buttons">Admin login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="Notification">
+            <p>Latest updates are here!</p>
+        </div>
+        <div class="department">
+            <ul>
+                <li> <button onclick="showFrame('CSeFrame')" class="buttons">CSE</button></li>
+                <li> <button onclick="showFrame('EcFrame')" class="buttons">EC</button></li>
+                <li> <button onclick="showFrame('CEFrame')" class="buttons">CE</button></div> </li>
+            </ul>
+       
+       
+       
+        
+        <!-- Define iframes -->
+        <iframe id="CSeFrame" src="CSe.html" width="100%" height="500px" frameborder="0"></iframe>
+        <iframe id="EcFrame" src="Ec.html" width="100%" height="500px" frameborder="0" style="display: none;"></iframe>
+        <iframe id="CEFrame" src="CE.html" width="100%" height="500px" frameborder="0" style="display: none;"></iframe>
+    
+        <script>
+            function showFrame(frameId) {
+                // Hide all iframes
+                var iframes = document.querySelectorAll('iframe');
+                iframes.forEach(function(iframe) {
+                    iframe.style.display = 'none';
+                });
+    
+                // Show the specific iframe based on frameId
+                var frameToShow = document.getElementById(frameId);
+                frameToShow.style.display = 'block';
+            }
+        </script>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>Email: kamleshlodhi9302@gmail.com</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <!-- Add social media links here -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <div class="useful-resources">
+                <h4>Useful Resources</h4>
+                <!-- Add useful resource links here -->
+                <a href="#" class="buttons">Privacy Policy</a>
+                <a href="#" class="buttons">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+    const saveNoticeButtons = document.querySelectorAll('.saveNoticeAsPdfButton');
+
+    saveNoticeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            try {
+                const doc = new jsPDF();
+                const htmlContent = button.parentNode.innerHTML;
+                const options = {
+                    filename: 'notice.pdf',
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'px', format: 'a4', orientation: 'portrait' }
+                };
+
+                doc.html(htmlContent, options);
+                doc.save(options.filename);
+            } catch (error) {
+                console.error('An error occurred:', error);
+            }
+        });
+    });
+});
+
+    </script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    
+    <script>
+        function saveDivAsPdf() {
+            var divContent = document.querySelector('.Notice').innerHTML;
+            var pdf = new jsPDF();
+            pdf.text(divContent, 10, 10);
+            pdf.save('divContent.pdf');
+        }
+    
+        document.querySelector('.saveNoticeAsPdfButton').addEventListener('click', saveDivAsPdf);
+    </script>
+    
+    
+</body>
+
+</html>

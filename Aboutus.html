@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="./Student/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: lightblue;
+            opacity: 100%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+
+            background: #98dbec;
+            box-shadow: inset -20px -20px 60px #81bac9,
+                inset 20px 20px 60px #affcff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            background: #35424a;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            border-bottom: #e8491d 2px solid;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            padding: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+
+        .testimonial {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .partner-logos img {
+            width: 150px;
+            /* Adjust width as needed */
+            margin: 10px;
+            border-radius: 50%;
+            /* Added border radius */
+        }
+
+        .latest-updates {
+            text-align: center;
+        }
+
+        .blog-post {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            min-height: 150px;
+        }
+
+        .scrolling-details {
+            background-color: rgba(241, 243, 244, 0.844);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .scrolling-details p {
+            margin: 0;
+            padding: 10px;
+            white-space: nowrap;
+            animation: scrollDetails 14s linear infinite;
+        }
+
+        .read-more {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .contact-info,
+        .social-media,
+        .useful-resources {
+            margin: 10px;
+        }
+
+        .dropbtn {
+            background-color: blue;
+            color: white;
+            padding: 8px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            /* Added margin for spacing */
+        }
+
+        .partner-logos img {
+            width: 100px;
+            /* Adjust width as needed */
+            margin: 0 10px;
+            /* Adjust margin for spacing */
+            border-radius: 50%;
+            /* Added border radius */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="partner-logos">
+            <img src="../img/library.png" alt="" style="width: 100px;">
+            <h2>Library Management System</h2>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="./Student/loginS.php">
+                    <h2 class="dropbtn">Student login</h2>
+                </a></li>
+            <li><a href="./Admin/loginA.php">
+                    <h2 class="dropbtn">Admin login</h2>
+                </a></li>
+        </ul>
+    </nav>
+
+    <main>
+       
+            <section>
+                <div class="testimonial">
+                    <h2>Welcome to the World of Computer Science!</h2>
+                    <p>As a fresher in Computer Science, you're embarking on an exciting and challenging journey. The
+                        world of computing is constantly evolving, and you'll need to keep pace with the latest
+                        developments in order to succeed.</p>
+
+                    <h2>Tips for Success</h2>
+                    <p>Here are some tips that can help you succeed as a CS student:</p>
+                    <ul>
+                        <li>Attend all your classes and take detailed notes.</li>
+                        <li>Participate in study groups and discussions with your classmates.</li>
+                        <li>Complete all your assignments on time.</li>
+                        <li>Take advantage of your professor's office hours if you have any questions or need additional
+                            help.</li>
+                        <li>Get involved in extracurricular activities related to computer science to develop your
+                            skills and network with others in the field.</li>
+                    </ul>
+
+                    <h2>Tools You'll Need</h2>
+                    <p>As a CS student, you'll need access to the following tools:</p>
+                    <ul>
+                        <li>A reliable computer with a good amount of memory and storage.</li>
+                        <li>A high-speed internet connection.</li>
+                        <li>Development tools, such as an Integrated Development Environment (IDE), a code editor, and a
+                            compiler or interpreter.</li>
+                        <li>Cloud-based tools, such as GitHub, for version control and collaboration.</li>
+                        <li>Textbooks and online resources to help you learn and reinforce concepts.</li>
+                    </ul>
+
+                    <h2>Challenges You May Face</h2>
+                    <p>As a CS student, you may face some challenges along the way. Here are a few of the most common:
+                    </p>
+                    <ul>
+                        <li>Difficulty understanding complex concepts and programming languages.</li>
+                        <li>Trouble keeping up with the fast pace of technological advances.</li>
+                        <li>Competition for internships and job opportunities in the field.</li>
+                        <li>Long hours spent sitting in front of a computer, which can be physically and mentally
+                            exhausting.</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>Computer science is a fascinating and rewarding field, but it can also be challenging. With the
+                        right tools, attitude, and support, you can succeed as a CS student and build a rewarding career
+                        in this exciting industry.</p>
+                </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>Email:kamleshlodhi9302@gmail.com</p>
+                <p>Phone: Not Applicable</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <!-- Add social media links here -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <div class="useful-resources">
+                <h4>Useful Resources</h4>
+                <!-- Add useful resource links here -->
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+    </script>
+</body>
+
+</html>
